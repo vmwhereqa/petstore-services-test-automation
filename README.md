@@ -1,6 +1,6 @@
 # Test Framework
 
-This Automation testing framework primarily uses Jest as test runner and below are the support modules:
+This Automation testing framework primarily uses **Jest** as test runner and below are the support modules:
 
   - superAgent - http lib
   - jest-html-reporter - to create html report
