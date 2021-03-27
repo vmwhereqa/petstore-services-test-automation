@@ -1,50 +1,68 @@
 import got from 'got';
+import FormData from 'form-data';
+import fs from 'fs';
+import * as pathNode from 'path';
 import logMessage from '../logger';
 
-const getURL = (operation) => `${process.env.BASE_URL}/${operation}`;
+const getURL = (path) => `${process.env.BASE_URL}/${path}`;
 
-const request = async (requestFn) => {
+const request = async (url, options) => {
   let response;
+  logMessage(url);
+  logMessage(options.method);
+  logMessage(options);
   try {
-    response = await requestFn;
+    response = await got(url, options);
+    logMessage(response.statusCode);
+    logMessage(response.body);
+    return response;
   } catch (error) {
-    
-    response = await error.response;
-    console.log(error);
-    logMessage(error);
     if (!error.response.statusCode) {
       throw error;
     }
+    logMessage(error.response.body);
+    return error.response;
   }
-  logMessage(response.statusCode);
-  logMessage(response.body);
+};
+
+const doGet = async (path, searchParams = {}) => {
+  const response = await request(getURL(path), { method: 'GET', searchParams });
   return response;
 };
 
-export const doGet = async (operation, queryParams = {}) => {
-  const res = await request(got.get(getURL(operation), { searchParams: queryParams }));
+const doPost = async (path, body = {}) => {
+  const response = await request(getURL(path), { method: 'POST', json: body });
+  return response;
+};
+
+const doPostWithParams = async (path, searchParams = {}) => {
+  const response = await request(getURL(path), { method: 'POST', searchParams });
+  return response;
+};
+
+const doPut = async (path, body = {}) => {
+  const res = await request(getURL(path), { method: 'PUT', json: body });
   return res;
 };
 
-export const doPost = async (operation, body = {}) => {
-  const res = await request(got.post(getURL(operation), { json: body }));
+const doDelete = async (path) => {
+  const res = await request(getURL(path), { method: 'DELETE' });
   return res;
 };
 
-export const doPostFormData = async (operation, form = {}) => {
- const res = await request(got.post(getURL(operation), { body: form }));
+const uploadImage = async (path, imageName) => {
+  const form = new FormData();
+  const file = pathNode.join(__dirname, '..', '..', 'data', 'photos', `${imageName}.jpeg`);
+  form.append('my_file', fs.createReadStream(file));
+  const res = await (request(`${getURL(path)}/uploadImage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/octet-stream' },
+    body: form,
+  }));
 
-  const res = await request(got({ method: 'POST', body: form }));
-  console.log(`vinod${res}`);
   return res;
 };
 
-export const doPut = async (operation, body) => {
-  const res = await request(got.put(getURL(operation), { json: body }));
-  return res;
-};
-
-export const doDelete = async (operation, body) => {
-  const res = await request(got.delete(getURL(operation), { json: body }));
-  return res;
+export {
+  doGet, doPost, doPut, doDelete, doPostWithParams, uploadImage,
 };

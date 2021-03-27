@@ -215,17 +215,22 @@ export const availablePetExpectation = [
   {
     id: 10,
     category: {
-      id: 1,
-      name: 'Dogs',
+      id: 3,
+      name: 'Rabbits',
     },
-    name: 'doggie',
+    name: 'Rabbit 1',
     photoUrls: [
-      'string',
+      'url1',
+      'url2',
     ],
     tags: [
       {
-        id: 0,
-        name: 'string',
+        id: 1,
+        name: 'tag3',
+      },
+      {
+        id: 2,
+        name: 'tag4',
       },
     ],
     status: 'available',
