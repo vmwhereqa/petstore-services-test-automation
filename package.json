@@ -1,0 +1,29 @@
+{
+  "name": "scoober-backend-test-automation",
+  "version": "1.0.0",
+  "description": "Backend automation framework",
+  "main": "index.js",
+  "author": "Vinod Muralidharan<vinodvijay.m@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "got": "^11.8.2",
+    "jest": "^26.6.3",
+    "jest-html-reporter": "^3.3.0",
+    "rimraf": "^3.0.2",
+    "winston": "^3.3.3"
+  },
+  "scripts": {
+    "test": "rimraf output/* && yarn jest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3"
+  }
+}
