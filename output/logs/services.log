@@ -133,3 +133,975 @@ info: 200
 info: 
 info: 200
 info: {"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2","/var/folders/8b/vv8yh06j60g9c8cxs6ryqn900000gn/T/inflector5070924728187598025.tmp"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"}
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order/10
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/user/logout
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: POST
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------945797631537411230695060\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------945797631537411230695060"}}
+info: http://localhost:8080/api/v3/user
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/createWithList
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: GET
+info: POST
+info: http://localhost:8080/api/v3/store/order
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/pet/2
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: http://localhost:8080/api/v3/pet
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: http://localhost:8080/api/v3/pet/9
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------511291782219707969540748\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------511291782219707969540748"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user
+info: POST
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: http://localhost:8080/api/v3/user/login
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: DELETE
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/pet/2
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/3
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: http://localhost:8080/api/v3/pet/7
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/9
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/7
+info: DELETE
+info: POST
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------129571888837569170277729\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------129571888837569170277729"}}
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/store/inventory
+info: http://localhost:8080/api/v3/user/createWithList
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: POST
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/store/order
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: POST
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: DELETE
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"DELETE"}
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: PUT
+info: http://localhost:8080/api/v3/user/theUser
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/1
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: http://localhost:8080/api/v3/pet/3
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: PUT
+info: POST
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: http://localhost:8080/api/v3/pet/8
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------938835471559941619662347\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------938835471559941619662347"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: POST
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: POST
+info: http://localhost:8080/api/v3/store/order
+info: http://localhost:8080/api/v3/store/order/10
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/logout
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: GET
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"DELETE"}
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: DELETE
+info: http://localhost:8080/api/v3/pet/findByTags
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: PUT
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: http://localhost:8080/api/v3/pet/7
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/9
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: DELETE
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: POST
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------734478517315344058655102\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------734478517315344058655102"}}
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: GET
+info: http://localhost:8080/api/v3/user/login
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order
+info: http://localhost:8080/api/v3/store/order/10
+info: POST
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: PUT
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: GET
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/3
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: PUT
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------964272079487632462346621\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------964272079487632462346621"}}
+info: POST
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/createWithList
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: POST
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/store/order/10
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: http://localhost:8080/api/v3/store/order/10
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: http://localhost:8080/api/v3/pet/2
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/3
+info: PUT
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/8
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------343149578256296526928859\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------343149578256296526928859"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: GET
+info: http://localhost:8080/api/v3/store/inventory
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/logout
+info: GET
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/store/order/10
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: DELETE
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: PUT
+info: http://localhost:8080/api/v3/user/theUser
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/pet/1
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: PUT
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: POST
+info: http://localhost:8080/api/v3/pet/8
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: POST
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/7
+info: DELETE
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------800500294220155126919296\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------800500294220155126919296"}}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: POST
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: POST
+info: http://localhost:8080/api/v3/user/createWithList
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: GET
+info: http://localhost:8080/api/v3/user/login
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/store/order/10
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: http://localhost:8080/api/v3/pet/1
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: GET
+info: http://localhost:8080/api/v3/pet/3
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: PUT
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: http://localhost:8080/api/v3/pet/7
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------851520227290607081989450\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------851520227290607081989450"}}
+info: POST
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: GET
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: http://localhost:8080/api/v3/user/theUser
+info: PUT
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: GET
+info: PUT
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/9
+info: DELETE
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"DELETE"}
+info: POST
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------917913976150276409209687\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------917913976150276409209687"}}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: http://localhost:8080/api/v3/store/inventory
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/user
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: POST
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/login
+info: GET
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/store/order/10
+info: http://localhost:8080/api/v3/user/logout
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: PUT
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"DELETE"}
+info: DELETE
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/1
+info: GET
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet
+info: PUT
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet
+info: http://localhost:8080/api/v3/pet/7
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/8
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/7
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------935497356994536360170559\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","flags":"r","mode":438,"fd":null,"end":null,"bytesRead":0,"closed":false,"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"constructed":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":true,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------935497356994536360170559"}}
+info: POST
+info: http://localhost:8080/api/v3/store/inventory
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/user
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: http://localhost:8080/api/v3/user/createWithList
+info: POST
+info: undefined {"method":"POST","json":[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}]}
+info: http://localhost:8080/api/v3/user/login
+info: undefined {"method":"GET","searchParams":{"username":"theUser","password":"12345"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"available"}}
+info: GET
+info: http://localhost:8080/api/v3/user/logout
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/store/order
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"petId":198772,"quantity":7,"shipDate":"2021-03-27T15:07:19.661Z","status":"approved","complete":true}}
+info: GET
+info: http://localhost:8080/api/v3/store/order/10
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: GET
+info: undefined {"method":"GET","searchParams":{"status":"pending"}}
+info: http://localhost:8080/api/v3/store/order/10
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByStatus
+info: undefined {"method":"GET","searchParams":{"status":"sold"}}
+info: GET
+info: http://localhost:8080/api/v3/user/theUser
+info: undefined {"method":"PUT","json":{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":12345,"phone":12345,"userStatus":1}}
+info: PUT
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag1"}}
+info: http://localhost:8080/api/v3/user/theUser
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/findByTags
+info: undefined {"method":"GET","searchParams":{"tags":"tag2"}}
+info: GET
+info: http://localhost:8080/api/v3/pet/findByTags
+info: GET
+info: undefined {"method":"GET","searchParams":{"tags":"tag3"}}
+info: http://localhost:8080/api/v3/pet/1
+info: undefined {"method":"GET","searchParams":{}}
+info: GET
+info: http://localhost:8080/api/v3/pet/2
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet/3
+info: GET
+info: undefined {"method":"GET","searchParams":{}}
+info: http://localhost:8080/api/v3/pet
+info: undefined {"method":"PUT","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: PUT
+info: http://localhost:8080/api/v3/pet
+info: POST
+info: undefined {"method":"POST","json":{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"fox","status":"pending"}}
+info: POST
+info: http://localhost:8080/api/v3/pet/8
+info: undefined {"method":"POST","searchParams":{"name":"whale","status":"sold"}}
+info: http://localhost:8080/api/v3/pet/9
+info: POST
+info: undefined {"method":"POST","searchParams":{"name":"goldFish","status":"available"}}
+info: http://localhost:8080/api/v3/pet/7
+info: DELETE
+info: undefined {"method":"DELETE"}
+info: http://localhost:8080/api/v3/pet/2/uploadImage
+info: undefined {"method":"POST","headers":{"Content-Type":"application/octet-stream"},"body":{"_overheadLength":154,"_valueLength":0,"_valuesToMeasure":[{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":false,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3,"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","fd":null,"flags":"r","mode":438,"end":null,"autoClose":true,"bytesRead":0,"closed":false}],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":false,"_streams":["----------------------------133841059801052863309612\r\nContent-Disposition: form-data; name=\"my_file\"; filename=\"lion.jpeg\"\r\nContent-Type: image/jpeg\r\n\r\n",{"source":{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":[],"flowing":false,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"errorEmitted":false,"emitClose":true,"autoDestroy":false,"destroyed":false,"errored":null,"closed":false,"closeEmitted":false,"defaultEncoding":"utf8","awaitDrainWriters":null,"multiAwaitDrain":false,"readingMore":false,"dataEmitted":false,"decoder":null,"encoding":null},"_events":{},"_eventsCount":3,"path":"/Users/vinodm/workspace/personal_projects/petstore-api-test-automation/src/data/photos/lion.jpeg","fd":null,"flags":"r","mode":438,"end":null,"autoClose":true,"bytesRead":0,"closed":false},"dataSize":0,"maxDataSize":null,"pauseStream":true,"_maxDataSizeExceeded":false,"_released":false,"_bufferedEvents":[{"0":"pause"}],"_events":{},"_eventsCount":1},null],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------133841059801052863309612"}}
+info: POST
